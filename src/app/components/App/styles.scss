@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+html,
+body {
+	min-height: 100%;
+}
+
+.container-app {
+	font-family: $font-family;
+}
