@@ -52,6 +52,26 @@ export default class Home extends React.Component {
 		);
 	}
 
+    /**
+     * get icons for races
+     *
+     * @returns img url for races
+     */
+	getIconFromRaceType(raceType) {
+		const baseUrl = '../../../assets/img/';
+		const raceTypeMapper = {
+			Trots: { img: `${baseUrl}horse.png` },
+			Greyhounds: { img: `${baseUrl}dog.png` },
+			Thoroughbred: { img: `${baseUrl}unknown.png` }
+		};
+		return raceTypeMapper[raceType].img;
+	}
+
+    /**
+     * gets time left to race start
+     *
+     * @returns time string
+     */
 	getTimeUntilRace(date) {
 		const calculateTimeUntilRace = new Date(date) - new Date();
 		const diffDays = Math.floor(calculateTimeUntilRace / 86400000); // days
@@ -63,7 +83,7 @@ export default class Home extends React.Component {
 	render() {
 		const listItems = this.state.raceData.map((data) =>
 			<tr key={data.EventID}>
-				<td><img role="presentation" src="../../../assets/img/dog.png" /></td>
+				<td><img role="presentation" src={this.getIconFromRaceType(data.EventTypeDesc)} /></td>
 				<td>{data.EventName}</td>
 				<td>{data.Venue.Venue}, {data.Venue.StateCode}<br />{data.Venue.Slug}</td>
 				<td>{this.getTimeUntilRace(data.AdvertisedStartTime)}</td>
