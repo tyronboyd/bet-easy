@@ -1,0 +1,33 @@
+div.div-container {
+  background-color: #8c36bc;
+  padding: 10px;
+  border-radius: 4px 4px 0 0;
+}
+
+div.container {
+  max-width: 30%;
+  margin: 0 auto;
+}
+
+h3.heading {
+  color: white;
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+td {
+  color: #333;
+  font-weight: 400;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 944px) {
+  div.container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
