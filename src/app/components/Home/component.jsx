@@ -11,7 +11,7 @@ export default class Home extends React.Component {
 	}
 	/**
 	 * Component did mount called when the app first loads.
-	 * An interval is set to update from the API (configurable in the config file).
+	 * An interval is set to update from the API
 	 *
 	 * @returns void
 	 */
@@ -23,9 +23,9 @@ export default class Home extends React.Component {
 	}
 
     /**
-     * Initialises marker data
+     * Initialises race data
      *
-     * @returns {Promise} The marker data
+     * @returns {Promise} The race data
      */
 	initData() {
 		this.getRaceData()
